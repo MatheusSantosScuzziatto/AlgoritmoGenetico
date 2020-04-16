@@ -1,0 +1,9 @@
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\bin\Debug\AlgoritmoGenetico.exe.config
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\bin\Debug\AlgoritmoGenetico.exe
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\bin\Debug\AlgoritmoGenetico.pdb
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.csprojResolveAssemblyReference.cache
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.Form1.resources
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.Properties.Resources.resources
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.csproj.GenerateResource.Cache
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.exe
+C:\Users\NobreSistemas\Downloads\Aplicacao_IA\AlgoritmoGenetico\AlgoritmoGenetico\obj\Debug\AlgoritmoGenetico.pdb
