@@ -307,7 +307,6 @@ namespace AlgoritmoGenetico
         private void plotarHistorico() {
             tb_historicobin.AppendText(tb_a1.Text + " - " + tb_a2.Text + " - " + tb_a3.Text + " - " + tb_a4.Text + Environment.NewLine);
             tb_historicodec.AppendText(tb_a1dec.Text + " - " + tb_a2dec.Text + " - " + tb_a3dec.Text + " - " + tb_a4dec.Text + Environment.NewLine);
-            
         }
     }
 }
