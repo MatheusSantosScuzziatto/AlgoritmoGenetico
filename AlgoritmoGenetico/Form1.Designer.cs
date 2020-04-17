@@ -61,7 +61,6 @@
             this.bt_proximageracao = new System.Windows.Forms.Button();
             this.bt_iniciar = new System.Windows.Forms.Button();
             this.lb_geracaobin = new System.Windows.Forms.Label();
-            this.bt_gerartodas = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.tb_a4initpop = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -101,6 +100,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.bt_gerartodas = new System.Windows.Forms.Button();
             this.tb_a4perc = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tb_a3perc = new System.Windows.Forms.TextBox();
@@ -119,8 +119,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.tb_historicobin = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_historicodec = new System.Windows.Forms.RichTextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.panelconfig.SuspendLayout();
             this.panelgeracoes.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label0
@@ -449,16 +455,6 @@
             this.lb_geracaobin.Size = new System.Drawing.Size(140, 13);
             this.lb_geracaobin.TabIndex = 57;
             this.lb_geracaobin.Text = "GERAÇÃO 1 (BINÁRIO)";
-            // 
-            // bt_gerartodas
-            // 
-            this.bt_gerartodas.Location = new System.Drawing.Point(392, 377);
-            this.bt_gerartodas.Name = "bt_gerartodas";
-            this.bt_gerartodas.Size = new System.Drawing.Size(145, 23);
-            this.bt_gerartodas.TabIndex = 58;
-            this.bt_gerartodas.Text = "Gerar Todas em Log";
-            this.bt_gerartodas.UseVisualStyleBackColor = true;
-            this.bt_gerartodas.Click += new System.EventHandler(this.bt_gerartodas_Click);
             // 
             // label26
             // 
@@ -913,6 +909,16 @@
             this.label38.TabIndex = 61;
             this.label38.Text = "A2";
             // 
+            // bt_gerartodas
+            // 
+            this.bt_gerartodas.Location = new System.Drawing.Point(392, 377);
+            this.bt_gerartodas.Name = "bt_gerartodas";
+            this.bt_gerartodas.Size = new System.Drawing.Size(145, 23);
+            this.bt_gerartodas.TabIndex = 58;
+            this.bt_gerartodas.Text = "Mutar Todas Gerações";
+            this.bt_gerartodas.UseVisualStyleBackColor = true;
+            this.bt_gerartodas.Click += new System.EventHandler(this.bt_gerartodas_Click);
+            // 
             // tb_a4perc
             // 
             this.tb_a4perc.Location = new System.Drawing.Point(436, 168);
@@ -1085,11 +1091,61 @@
             this.label16.TabIndex = 35;
             this.label16.Text = "A2";
             // 
+            // tb_historicobin
+            // 
+            this.tb_historicobin.Location = new System.Drawing.Point(3, 33);
+            this.tb_historicobin.Name = "tb_historicobin";
+            this.tb_historicobin.ReadOnly = true;
+            this.tb_historicobin.Size = new System.Drawing.Size(217, 509);
+            this.tb_historicobin.TabIndex = 70;
+            this.tb_historicobin.Text = "";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label46);
+            this.panel1.Controls.Add(this.label45);
+            this.panel1.Controls.Add(this.tb_historicodec);
+            this.panel1.Controls.Add(this.tb_historicobin);
+            this.panel1.Location = new System.Drawing.Point(563, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(442, 550);
+            this.panel1.TabIndex = 71;
+            // 
+            // tb_historicodec
+            // 
+            this.tb_historicodec.Location = new System.Drawing.Point(222, 33);
+            this.tb_historicodec.Name = "tb_historicodec";
+            this.tb_historicodec.ReadOnly = true;
+            this.tb_historicodec.Size = new System.Drawing.Size(217, 509);
+            this.tb_historicodec.TabIndex = 71;
+            this.tb_historicodec.Text = "";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(3, 17);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(111, 13);
+            this.label45.TabIndex = 68;
+            this.label45.Text = "Gerações (binário)";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(219, 17);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(116, 13);
+            this.label46.TabIndex = 72;
+            this.label46.Text = "Gerações (decimal)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 571);
+            this.ClientSize = new System.Drawing.Size(1017, 571);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelgeracoes);
             this.Controls.Add(this.panelconfig);
             this.Controls.Add(this.label26);
@@ -1099,6 +1155,8 @@
             this.panelconfig.PerformLayout();
             this.panelgeracoes.ResumeLayout(false);
             this.panelgeracoes.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1138,7 +1196,6 @@
         private System.Windows.Forms.Button bt_proximageracao;
         private System.Windows.Forms.Button bt_iniciar;
         private System.Windows.Forms.Label lb_geracaobin;
-        private System.Windows.Forms.Button bt_gerartodas;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox tb_a4initpop;
         private System.Windows.Forms.Label label27;
@@ -1196,6 +1253,12 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Button bt_gerartodas;
+        private System.Windows.Forms.RichTextBox tb_historicobin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox tb_historicodec;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
     }
 }
 

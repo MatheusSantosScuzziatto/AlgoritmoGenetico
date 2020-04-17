@@ -41,6 +41,8 @@ namespace AlgoritmoGenetico
                 geracoesMutadas = 0;
                 lb_geracaobin.Text = "GERAÇÃO 1 (BINÁRIO)";
                 lb_geracaodec.Text = "GERAÇÃO 1 (DECIMAL)";
+                tb_historicobin.Clear();
+                tb_historicodec.Clear();
                 habilitarConfiguracao(false);
                 mutacao(tb_a1initpop.Text, tb_a2initpop.Text, tb_a3initpop.Text, tb_a4initpop.Text);
             }
@@ -53,7 +55,14 @@ namespace AlgoritmoGenetico
 
         private void bt_gerartodas_Click(object sender, EventArgs e)
         {
-            //gerar log de todas as mutações. Fazer em loop
+            bt_proximageracao.Enabled = false;
+            bt_gerartodas.Enabled = false;
+            while (panelgeracoes.Enabled)
+            {
+                bt_proximageracao_Click(sender, e);
+            }
+            bt_proximageracao.Enabled = true;
+            bt_gerartodas.Enabled = true;
         }
 
         private void rb_geracao_CheckedChanged(object sender, EventArgs e)
@@ -199,18 +208,11 @@ namespace AlgoritmoGenetico
             tb_a4nextgen.Text = a4nextgen;
             #endregion
 
+            plotarHistorico();
+
             #region Verifica se o limite foi atingido
             if (verificaLimite())
             {
-                tb_a1.Text = tb_a1nextgen.Text;
-                tb_a2.Text = tb_a2nextgen.Text;
-                tb_a3.Text = tb_a3nextgen.Text;
-                tb_a4.Text = tb_a4nextgen.Text;
-                tb_a1dec.Text = Convert.ToInt32(tb_a1nextgen.Text, 2).ToString();
-                tb_a2dec.Text = Convert.ToInt32(tb_a2nextgen.Text, 2).ToString();
-                tb_a3dec.Text = Convert.ToInt32(tb_a3nextgen.Text, 2).ToString();
-                tb_a4dec.Text = Convert.ToInt32(tb_a4nextgen.Text, 2).ToString();
-                
                 clear(new Object[]{ tb_a1fx, tb_a1perc, tb_a1sorteio, tb_a1cross, tb_a1nextgen, tb_a2fx, 
                     tb_a2perc, tb_a2sorteio, tb_a2cross, tb_a2nextgen, tb_a3fx, tb_a3perc, tb_a3sorteio, 
                     tb_a3cross, tb_a3nextgen, tb_a4fx, tb_a4perc, tb_a4sorteio, tb_a4cross, tb_a4nextgen });
@@ -300,6 +302,12 @@ namespace AlgoritmoGenetico
                 retorno += bit.ToString();
             }
             return retorno;
+        }
+
+        private void plotarHistorico() {
+            tb_historicobin.AppendText(tb_a1.Text + " - " + tb_a2.Text + " - " + tb_a3.Text + " - " + tb_a4.Text + Environment.NewLine);
+            tb_historicodec.AppendText(tb_a1dec.Text + " - " + tb_a2dec.Text + " - " + tb_a3dec.Text + " - " + tb_a4dec.Text + Environment.NewLine);
+            
         }
     }
 }
